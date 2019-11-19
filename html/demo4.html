@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/work1.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="box">
+    <button @click="axiousGet()">axiousGet</button>
+    <button @click="axiousPost()">axiousPost</button>
+    <div>
+        <table>
+            <tr v-for="item,index in dataList" :key="index">
+                <td>{{item+1}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.replyCount}}/{{item.viewCount}}</td>
+                <td>{{item.lastPostTime}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script src="../js/rem.js"></script>
+<script src="../js/axious.js"></script>
+<script src="../js/index4.js"></script>
+</html>
